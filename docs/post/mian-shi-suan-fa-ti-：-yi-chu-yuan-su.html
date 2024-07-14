@@ -151,7 +151,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 }</pre></div>
 <h4>解法二：双指针优化</h4>
 <h5>思路：</h5>
-<p>在解法一中，最坏的情况是全部的元素都不等于<code class="notranslate">val</code>，这相对于扫描了两遍数组。<br>
+<p>在解法一中，最坏的情况是全部的元素都不等于<code class="notranslate">val</code>，这相当于扫描了两遍数组。<br>
 为了进一步优化，我们可以让两个指针初始时分别位于数组的首尾，向中间移动遍历该序列。<br>
 令左指针为<code class="notranslate">left</code>，右指针为<code class="notranslate">right</code>。<br>
 判断左指针<code class="notranslate">left</code>所指向的值<code class="notranslate">nums[left]</code>是否等于<code class="notranslate">val</code>，若等于，则将<code class="notranslate">nums[right]</code>赋值给<code class="notranslate">nums[left]</code>，同时<code class="notranslate">right</code>-1；若不等于，则<code class="notranslate">left</code>+1。只要<code class="notranslate">left</code>&lt;=<code class="notranslate">right</code>，就不断循环这一步。</p>
