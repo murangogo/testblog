@@ -93,7 +93,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>思路是首先创建一个新数组<code class="notranslate">resnum</code>，大小为m+n，以存放排好序的答案数组。</p>
 <p>然后设置两个指针，<code class="notranslate">ptr1</code>与<code class="notranslate">ptr2</code>，指向<code class="notranslate">nums1</code>和<code class="notranslate">nums2</code>的当前位置，初始为0，即指向数组头。</p>
 <p>接下来，比较<code class="notranslate">nums1[ptr1]</code>和<code class="notranslate">nums2[ptr2]</code>的大小，将小的那一个放入<code class="notranslate">resnum[i]</code>中，其中的<code class="notranslate">i</code>表示当前<code class="notranslate">resnum</code>的位置，初始值为0。</p>
-<p>当<code class="notranslate">nums1</code>（或<code class="notranslate">nums2</code>)中的数字全部放入<code class="notranslate">resnum</code>中，而<code class="notranslate">nums2</code>（或<code class="notranslate">nums1</code>)中还有剩余，则将<code class="notranslate">nums2</code>（或<code class="notranslate">nums1</code>)中的数字全部按照原顺序放入新数组<code class="notranslate">resnum</code>中。</p>
+<p>当<code class="notranslate">nums1</code>（或<code class="notranslate">nums2</code>）中的数字全部放入<code class="notranslate">resnum</code>中，而<code class="notranslate">nums2</code>（或<code class="notranslate">nums1</code>）中还有剩余，则将<code class="notranslate">nums2</code>（或<code class="notranslate">nums1</code>）中的数字全部按照原顺序放入新数组<code class="notranslate">resnum</code>中。</p>
 <h5>复杂度：</h5>
 <p>时间复杂度：</p>
 <p>$O(M+N)$​</p>
@@ -169,7 +169,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>初始时，两个指针<code class="notranslate">ptr1</code>与<code class="notranslate">ptr2</code>分别在<code class="notranslate">nums1</code>和<code class="notranslate">nums2</code>的末尾（对于<code class="notranslate">nums1</code>，这里的末尾指的是有数字的末尾），和解法一的位置相反。</p>
 <p>同时，设立<code class="notranslate">i</code>为<code class="notranslate">m+n-1</code>，指向<code class="notranslate">nums1</code>的真末尾，即整个<code class="notranslate">nums1</code>数组的末尾，包括为0的部分。</p>
 <p>借助”初始数组有序“的条件。比较<code class="notranslate">ptr1</code>与<code class="notranslate">ptr2</code>指向的末尾两个元素的大小，将大的那一个放入<code class="notranslate">nums1</code>的末尾<code class="notranslate">nums1[i]</code>处，并移动指针向前（包含较大元素的数组的指针和<code class="notranslate">i</code>）。</p>
-<p>以此类推，直到<code class="notranslate">nums1</code>（或<code class="notranslate">nums2</code>)中的数字全部放入<code class="notranslate">resnum</code>中，而<code class="notranslate">nums2</code>（或<code class="notranslate">nums1</code>)中还有剩余，则将<code class="notranslate">nums2</code>（或<code class="notranslate">nums1</code>)中的数字全部按照原顺序放入新数组<code class="notranslate">resnum</code>中。</p>
+<p>以此类推，直到<code class="notranslate">nums1</code>（或<code class="notranslate">nums2</code>）中的数字全部放入<code class="notranslate">resnum</code>中，而<code class="notranslate">nums2</code>（或<code class="notranslate">nums1</code>）中还有剩余，则将<code class="notranslate">nums2</code>（或<code class="notranslate">nums1</code>）中的数字全部按照原顺序放入新数组<code class="notranslate">resnum</code>中。</p>
 <h5>复杂度：</h5>
 <p>时间复杂度：$O(M+N)$</p>
 <p>空间复杂度：$O(1)$</p>
